@@ -36,4 +36,20 @@ export const musicArticles: MusicArticle[] = [
     tags: ['Indonesia', 'Folk', 'Pop'],
     heroColor: 'linear-gradient(135deg, #F4A261, #E76F51)',
   },
-];
+  {
+    slug: 'ai-augmentation',
+    title: "AI Won't Replace Developers — But It Will Redefine Them",
+    excerpt: 'Why boomerang hiring, code review bottlenecks, and the real productivity equation prove that AI augments developers rather than replacing them.',
+    date: 'May 2026',
+    genre: 'Technology',
+    tags: ['AI', 'Software', 'Productivity'],
+    heroColor: 'linear-gradient(135deg, #3D405B, #2A9D8F)',
+  },  {
+    slug: 'ruby-llm',
+    title: 'Ruby and the Art of Talking to Machines',
+    excerpt: 'Why Ruby\'s elegant syntax makes it a surprisingly beautiful language for working with LLMs \u2014 and how it compares to the noise elsewhere.',
+    date: 'May 2026',
+    genre: 'Technology',
+    tags: ['Ruby', 'LLM', 'AI', 'Code'],
+    heroColor: 'linear-gradient(135deg, #CC342D, #E76F51)',
+  },];

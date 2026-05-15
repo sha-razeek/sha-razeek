@@ -1,0 +1,374 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="AI Won't Replace Developers — But It Will Redefine Them" description="Why boomerang hiring, code review bottlenecks, and the real productivity equation prove that AI augments developers rather than replacing them">
+  <nav class="breadcrumb">
+    <a href="/blog">Articles</a>
+    <span class="breadcrumb-sep">→</span>
+    <span class="breadcrumb-current">Technology</span>
+  </nav>
+
+  <article class="article-page">
+    <header class="article-header tech-header">
+      <span class="article-category">◈ Technology</span>
+      <h1>AI Won't Replace Developers — But It Will Redefine Them</h1>
+      <p class="article-meta">May 2026 · 9 min read</p>
+    </header>
+
+    <div class="article-content">
+      <div class="article-image tech-hero">
+        <div class="img-overlay">
+          <span class="img-label">The Augmentation Equation</span>
+        </div>
+      </div>
+
+      <p class="article-lead">
+        The narrative that AI will render software developers obsolete has become something of a
+        parlor game in tech circles. It makes for compelling headlines and conference keynotes.
+        But the reality on the ground — the reality that engineering managers, CTOs, and developers
+        themselves are living through — tells a far more nuanced and interesting story.
+      </p>
+
+      <h2>The Boomerang Effect</h2>
+      <p>
+        Here's a phenomenon that hasn't received nearly enough attention: <strong>boomerang hiring</strong>.
+        Companies that laid off engineering teams in favour of AI-driven development are quietly
+        hiring them back. Not because AI failed, exactly — but because the organisation discovered
+        something fundamental about the relationship between human expertise and machine capability.
+      </p>
+      <p>
+        The pattern goes something like this. A company embraces AI coding assistants, sees an
+        initial burst of productivity, and concludes that it can operate with a leaner team.
+        Engineers are let go. Weeks pass. The codebase accumulates subtle issues — architectural
+        decisions that no one questions because no one understands the original intent, edge cases
+        that slip through automated tests, performance regressions that compound quietly. Eventually,
+        the company rehires — often the very people it let go — at a premium.
+      </p>
+
+      <blockquote>
+        "AI can write code. It cannot own code. There is a profound difference between generating
+        syntax and bearing responsibility for a system that serves millions."
+      </blockquote>
+
+      <p>
+        This isn't a failure of AI. It's a misunderstanding of what software development actually
+        is. Writing code is perhaps 20% of the job. The rest is understanding context, navigating
+        trade-offs, reading the intentions embedded in a codebase by its original authors, and
+        making judgment calls that no training data can fully prepare you for.
+      </p>
+
+      <div class="article-image tech-boomerang">
+        <div class="img-overlay">
+          <span class="img-label">The boomerang trajectory</span>
+        </div>
+      </div>
+
+      <h2>The Productivity Paradox</h2>
+      <p>
+        Studies and industry reports consistently show that AI coding tools deliver genuine
+        productivity gains — in some cases, dramatic ones. GitHub's research suggests developers
+        complete tasks up to 55% faster with Copilot. Amazon reported similar improvements with
+        their internal tools. These numbers are real, and they matter.
+      </p>
+      <p>
+        But productivity gains in software development are not straightforward arithmetic. Writing
+        code faster does not mean shipping software faster. It does not mean shipping <em>better</em>
+        software. And it most certainly does not mean spending less time on the activities that
+        actually determine whether a project succeeds or fails.
+      </p>
+      <p>
+        Consider the time equation. If an AI tool helps a developer write a function in 10 minutes
+        instead of 30, that's a 20-minute saving. Brilliant. But if the code review for that
+        function now takes 40 minutes instead of 15 — because the reviewer must carefully examine
+        unfamiliar patterns, interrogate assumptions the AI made, and verify that the generated
+        code actually does what it appears to do — then the net gain is negative.
+      </p>
+
+      <h2>The Code Review Bottleneck</h2>
+      <p>
+        This is the elephant in the room that few AI evangelists want to discuss:
+        <strong>code review has become the new bottleneck</strong>.
+      </p>
+      <p>
+        When humans write code, reviewers can leverage shared context — the author's habits,
+        their understanding of the system, the conventions of the team. When AI generates code,
+        that contextual scaffolding is absent. The reviewer must treat every AI-generated suggestion
+        as if it were written by a talented stranger who left no notes.
+      </p>
+      <p>
+        And AI-generated code has a particular quality that makes it <em>harder</em> to review:
+        it looks confident. It's syntactically perfect, well-structured, and presented with the
+        quiet authority of a system that has no self-doubt. This confidence is precisely what makes
+        it dangerous. A junior developer's code raises natural skepticism. An AI's code lulls you
+        into acceptance.
+      </p>
+
+      <blockquote>
+        "The most perilous code is the kind that looks correct. AI produces nothing but that."
+      </blockquote>
+
+      <p>
+        The result is a paradox: AI generates code faster, but humans review it slower. The overall
+        cycle time may improve modestly, but the cognitive load on senior developers — the people
+        whose judgment holds the whole system together — increases substantially. And those are
+        precisely the people you cannot afford to burn out.
+      </p>
+
+      <div class="article-image tech-code-review">
+        <div class="img-overlay">
+          <span class="img-label">Where the time actually goes</span>
+        </div>
+      </div>
+
+      <h2>What AI Actually Does Well</h2>
+      <p>
+        None of this is to diminish AI's contribution to software development. It's genuinely
+        transformative in specific, well-defined areas:
+      </p>
+
+      <div class="listening-guide">
+        <div class="listening-item">
+          <strong>Boilerplate and scaffolding</strong>
+          <p>Generating repetitive code, configuration files, and standard patterns — the tedious work that drains creative energy.</p>
+        </div>
+        <div class="listening-item">
+          <strong>Exploration and learning</strong>
+          <p>Rapidly understanding unfamiliar codebases, languages, or frameworks. AI is an exceptional tutor.</p>
+        </div>
+        <div class="listening-item">
+          <strong>First drafts</strong>
+          <p>Producing a starting point that a developer can refine. The value isn't in the output — it's in eliminating the blank page.</p>
+        </div>
+        <div class="listening-item">
+          <strong>Test generation</strong>
+          <p>Creating comprehensive test cases, edge cases, and mock data. This is genuinely time-saving and improves quality.</p>
+        </div>
+      </div>
+
+      <h2>What AI Cannot Do</h2>
+      <p>
+        AI cannot hold a system in its head. It doesn't understand why a particular design decision
+        was made three years ago in response to a production incident that nobody documented. It
+        doesn't know that the finance team relies on a seemingly unused field, or that the API
+        endpoint that looks redundant is actually serving a critical integration.
+      </p>
+      <p>
+        More fundamentally, AI cannot exercise <strong>engineering judgment</strong>. It cannot weigh
+        the trade-off between shipping quickly and building something maintainable. It cannot read
+        the room in a design review. It cannot push back on a product requirement that sounds
+        reasonable but will create a maintenance nightmare six months hence.
+      </p>
+      <p>
+        Software development, at its core, is an exercise in managing complexity under uncertainty.
+        AI excels at pattern recognition within known domains. It struggles — genuinely struggles —
+        with the novel, the ambiguous, and the political.
+      </p>
+
+      <h2>The Real Future: Augmentation, Not Replacement</h2>
+      <p>
+        The most productive engineering teams in 2026 aren't the ones that replaced developers
+        with AI. They're the ones that gave their developers AI tools and trusted them to use
+        those tools wisely. The distinction matters enormously.
+      </p>
+      <p>
+        Augmentation means a senior developer can spend less time on grunt work and more time
+        on architecture, mentoring, and the kind of deep thinking that produces elegant systems.
+        It means a mid-level developer can level up faster by having AI explain unfamiliar code
+        and suggest patterns. It means a junior developer can be productive sooner without
+        forming bad habits that will haunt them later.
+      </p>
+      <p>
+        But this only works when there are experienced humans in the loop — people who can
+        distinguish between code that is merely functional and code that is <em>correct</em>,
+        maintainable, and aligned with the system's broader architecture.
+      </p>
+
+      <blockquote>
+        "The best developer in 2026 isn't the one who writes the most code. It's the one who
+        asks the right questions of the code the machine provides."
+      </blockquote>
+
+      <h2>A Word of Caution</h2>
+      <p>
+        The boomerang hiring trend should serve as a cautionary tale for any organisation
+        tempted to treat AI as a replacement for human expertise. The short-term productivity
+        numbers can be seductive. But software is a long game. The costs of replacing developers
+        with AI don't appear on the quarter's balance sheet — they manifest over months and years,
+        in accumulated technical debt, in lost institutional knowledge, and in teams that lose
+        the ability to make sound engineering decisions.
+      </p>
+      <p>
+        The organisations that will thrive are those that pair AI's remarkable capabilities
+        with human judgment, experience, and accountability. Not because AI isn't powerful — it
+        is. But because building software that matters requires something more than power.
+        It requires wisdom. And wisdom, for now, remains a human endeavour.
+      </p>
+
+      <div class="jet-line"><span>◈</span></div>
+
+      <div class="article-nav">
+        <a href="/blog/dangdut" class="btn">← Dangdut</a>
+        <a href="/blog" class="btn">All Articles</a>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-warm-gray);
+  }
+  .breadcrumb a { color: var(--accent-primary); }
+  .breadcrumb-sep { opacity: 0.5; }
+
+  .article-page { max-width: 720px; }
+
+  .article-header {
+    border-radius: var(--radius-lg);
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+    color: white;
+  }
+
+  .tech-header {
+    background: linear-gradient(135deg, #3D405B, #2A9D8F);
+  }
+
+  .article-category {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+  }
+
+  .article-header h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .article-meta {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    opacity: 0.7;
+  }
+
+  .article-content {
+    line-height: 1.85;
+  }
+
+  .article-content h2 {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+  }
+
+  .article-content h2:first-of-type {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .article-lead {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text-primary);
+    font-weight: 400;
+  }
+
+  .article-content blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    line-height: 1.7;
+    border-left: 3px solid var(--accent-primary);
+    padding: 1rem 1.5rem;
+    background: rgba(42, 157, 143, 0.06);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin: 2rem 0;
+    color: var(--text-secondary);
+  }
+
+  /* Image placeholders */
+  .article-image {
+    width: 100%;
+    height: 220px;
+    border-radius: var(--radius-lg);
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tech-hero {
+    background: linear-gradient(135deg, #3D405B, #2A9D8F, #E9C46A);
+  }
+
+  .tech-boomerang {
+    background: linear-gradient(135deg, #2A9D8F, #264653);
+  }
+
+  .tech-code-review {
+    background: linear-gradient(135deg, #E76F51, #3D405B);
+  }
+
+  .img-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.25rem;
+    background: linear-gradient(0deg, rgba(0,0,0,0.35) 0%, transparent 60%);
+  }
+
+  .img-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.9;
+  }
+
+  /* Listening guide (reused for lists) */
+  .listening-guide {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .listening-item {
+    padding: 1rem 1.25rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-teal);
+  }
+
+  .listening-item strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+  }
+
+  .listening-item p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  /* Article nav */
+  .article-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+  }
+</style>

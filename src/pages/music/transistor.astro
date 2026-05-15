@@ -12,6 +12,7 @@ import Layout from '../../layouts/Layout.astro';
     <!-- Now Playing Bar -->
     <div class="now-playing" id="nowPlaying" style="display: none;">
       <div class="np-info">
+        <div class="np-favicon" id="npFavicon"></div>
         <div class="np-indicator"></div>
         <div class="np-text">
           <span class="np-station" id="npStation">—</span>
@@ -39,7 +40,6 @@ import Layout from '../../layouts/Layout.astro';
     <div class="radio-tabs">
       <button class="tab active" data-tab="favorites">Favorites</button>
       <button class="tab" data-tab="results">Results</button>
-      <button class="tab" data-tab="top">Top Stations</button>
     </div>
 
     <!-- Station Lists -->
@@ -52,12 +52,6 @@ import Layout from '../../layouts/Layout.astro';
     <div class="tab-content" id="tabResults" style="display: none;">
       <div class="station-list" id="resultsList">
         <p class="empty-state">Search for stations above to see results.</p>
-      </div>
-    </div>
-
-    <div class="tab-content" id="tabTop" style="display: none;">
-      <div class="station-list" id="topList">
-        <p class="loading-text">Loading top stations...</p>
       </div>
     </div>
 
@@ -88,6 +82,25 @@ import Layout from '../../layouts/Layout.astro';
     align-items: center;
     gap: 0.75rem;
     min-width: 0;
+  }
+
+  .np-favicon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .np-favicon img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    display: block;
   }
 
   .np-indicator {
@@ -240,26 +253,31 @@ import Layout from '../../layouts/Layout.astro';
 
   /* Station List */
   .station-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 260px);
+    gap: 1.25rem;
   }
 
   .station-item {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
+    gap: 0;
+    padding: 1.25rem 1.1rem;
     background: white;
-    border: 1px solid transparent;
-    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
     cursor: pointer;
     transition: all var(--transition-fast);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
   }
 
   .station-item:hover {
     border-color: var(--accent-primary);
-    background: rgba(42, 157, 143, 0.03);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
   }
 
   .station-item.playing {
@@ -267,77 +285,91 @@ import Layout from '../../layouts/Layout.astro';
     background: rgba(42, 157, 143, 0.06);
   }
 
-  .station-favicon {
-    width: 36px;
-    height: 36px;
-    border-radius: var(--radius-sm);
-    object-fit: cover;
-    background: var(--bg-secondary);
-    flex-shrink: 0;
-  }
-
-  .station-favicon-placeholder {
-    width: 36px;
-    height: 36px;
-    border-radius: var(--radius-sm);
-    background: rgba(42, 157, 143, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    color: var(--accent-primary);
-    flex-shrink: 0;
-  }
-
   .station-info {
     flex: 1;
     min-width: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.85rem 1.1rem 0.4rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 
   .station-name {
-    font-weight: 500;
-    font-size: 0.9rem;
-    white-space: nowrap;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.05rem;
+    line-height: 1.3;
     overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: var(--text-primary);
   }
 
-  .station-meta {
+  .station-country {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+  }
+
+  .station-codec {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     color: var(--color-warm-gray);
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
   }
 
   .station-actions {
     display: flex;
-    gap: 0.35rem;
+    gap: 0.5rem;
     flex-shrink: 0;
+    justify-content: center;
+    padding: 0.3rem 1.1rem 1rem;
   }
 
   .station-btn {
-    width: 34px;
-    height: 34px;
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
-    background: white;
+    width: 42px;
+    height: 42px;
+    border: 2px solid var(--color-warm-gray);
+    border-radius: 50%;
+    background: var(--color-offwhite);
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all var(--transition-fast);
-    color: var(--text-secondary);
+    transition: all var(--transition-medium);
+    color: var(--color-charcoal);
+    box-shadow: 0 2px 0 var(--color-warm-gray);
+  }
+
+  .station-btn:active {
+    transform: translateY(2px);
+    box-shadow: none;
   }
 
   .station-btn:hover {
     border-color: var(--accent-primary);
     color: var(--accent-primary);
+    background: rgba(42, 157, 143, 0.06);
+    box-shadow: 0 2px 0 var(--accent-primary);
   }
 
   .station-btn.fav-active {
     color: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+    background: rgba(231, 111, 81, 0.08);
+    box-shadow: 0 2px 0 var(--accent-secondary);
+  }
+
+  .station-btn.fav-active:hover {
+    color: white;
+    background: var(--accent-secondary);
     border-color: var(--accent-secondary);
   }
 
@@ -389,11 +421,11 @@ import Layout from '../../layouts/Layout.astro';
   const btnPlayPause = document.getElementById('btnPlayPause')!;
   const btnStop = document.getElementById('btnStop')!;
   const btnFav = document.getElementById('btnFav')!;
+  const npFavicon = document.getElementById('npFavicon')!;
   const btnSearch = document.getElementById('btnSearch')!;
   const volumeSlider = document.getElementById('volumeSlider') as HTMLInputElement;
   const favoritesList = document.getElementById('favoritesList')!;
   const resultsList = document.getElementById('resultsList')!;
-  const topList = document.getElementById('topList')!;
 
   // Default favorites
   const defaultFavorites: Station[] = [
@@ -428,7 +460,6 @@ import Layout from '../../layouts/Layout.astro';
     const saved = localStorage.getItem('transistor-favorites');
     favorites = saved ? JSON.parse(saved) : [...defaultFavorites];
     renderFavorites();
-    loadTopStations();
     setupTabs();
     setupEventListeners();
     audio.volume = 0.75;
@@ -521,17 +552,6 @@ import Layout from '../../layouts/Layout.astro';
     }
   }
 
-  // Top Stations
-  async function loadTopStations() {
-    try {
-      const res = await fetch(`${API_BASE}/stations/topvote?limit=30&hidebroken=true`);
-      const stations: Station[] = await res.json();
-      renderStations(stations, topList);
-    } catch {
-      topList.innerHTML = '<p class="empty-state">Could not load top stations.</p>';
-    }
-  }
-
   // Render
   function renderStations(stations: Station[], container: HTMLElement) {
     if (stations.length === 0) {
@@ -541,13 +561,10 @@ import Layout from '../../layouts/Layout.astro';
 
     container.innerHTML = stations.map(s => `
       <div class="station-item" data-station-id="${s.stationuuid}">
-        ${s.favicon
-          ? `<img class="station-favicon" src="${s.favicon}" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="station-favicon-placeholder" style="display:none">♪</div>`
-          : `<div class="station-favicon-placeholder">♪</div>`
-        }
         <div class="station-info">
           <div class="station-name">${escapeHtml(s.name)}</div>
-          <div class="station-meta">${escapeHtml(s.country)} · ${s.codec} ${s.bitrate}k</div>
+          <div class="station-country">${escapeHtml(s.country)}</div>
+          <div class="station-codec">${s.codec} · ${s.bitrate}k</div>
         </div>
         <div class="station-actions">
           <button class="station-btn fav-btn ${isFavorite(s.stationuuid) ? 'fav-active' : ''}" data-uuid="${s.stationuuid}" title="Favorite">
@@ -603,7 +620,13 @@ import Layout from '../../layouts/Layout.astro';
     nowPlaying.style.display = 'flex';
     npStation.textContent = station.name;
     npCountry.textContent = `${station.country} · ${station.codec} ${station.bitrate}k`;
-
+    if (station.favicon) {
+      npFavicon.innerHTML = `<img src="${station.favicon}" alt="" width="40" height="40">`;
+      npFavicon.style.display = 'flex';
+    } else {
+      npFavicon.innerHTML = '';
+      npFavicon.style.display = 'none';
+    }
     btnFav.textContent = isFavorite(station.stationuuid) ? '♥' : '♡';
   }
 
@@ -614,6 +637,8 @@ import Layout from '../../layouts/Layout.astro';
     btnPlayPause.textContent = '▶';
     currentStation = null;
     nowPlaying.style.display = 'none';
+    npFavicon.innerHTML = '';
+    npFavicon.style.display = 'none';
     document.querySelectorAll('.station-item').forEach(el => el.classList.remove('playing'));
   }
 

@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { musicArticles } from '../../data/music';
+
+const musicOnly = musicArticles.filter(a => a.genre !== 'Technology');
 ---
 
 <Layout title="Music" description="Music writing, playlists, and the Transistor radio player">
@@ -31,7 +33,7 @@ import { musicArticles } from '../../data/music';
         <h2>Music Writing</h2>
       </div>
       <div class="music-articles stagger">
-        {musicArticles.map((article) => (
+        {musicOnly.map((article) => (
           <a href={`/blog/${article.slug}`} class="card music-article-card">
             <div class="music-article-hero" style={`background: ${article.heroColor}`}>
               <span class="music-article-genre">{article.genre}</span>
