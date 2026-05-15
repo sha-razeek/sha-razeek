@@ -77,22 +77,61 @@ import { musicArticles } from '../data/music';
     </div>
   </section>
 
+  <!-- Applications Section -->
+  <section class="section">
+    <div class="section-header">
+      <h2>Applications</h2>
+    </div>
+    <div class="apps-container stagger">
+      <a href="/music/transistor" class="app-promo-card app-promo-card--transistor">
+        <div class="app-promo-content">
+          <div class="app-promo-header">
+            <span class="app-promo-icon">📻</span>
+            <div class="app-promo-title-group">
+              <h3 class="app-promo-title">Transistor</h3>
+              <span class="app-promo-tag">Radio Receiver</span>
+            </div>
+          </div>
+          <p class="app-promo-desc">Global radio broadcasting at your fingertips. Tuned to thousands of stations worldwide with a retro-futuristic interface.</p>
+          <div class="app-promo-footer">
+            <span class="btn btn--small">Launch Station →</span>
+          </div>
+        </div>
+        <div class="app-promo-visual">
+          <div class="visual-circle"></div>
+          <div class="visual-waves">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/projects/cathode" class="app-promo-card app-promo-card--cathode">
+        <div class="app-promo-content">
+          <div class="app-promo-header">
+            <span class="app-promo-icon">📺</span>
+            <div class="app-promo-title-group">
+              <h3 class="app-promo-title">Cathode</h3>
+              <span class="app-promo-tag">Vision Monitor</span>
+            </div>
+          </div>
+          <p class="app-promo-desc">Direct satellite transmission from across the globe. Seamless streaming of live international television channels.</p>
+          <div class="app-promo-footer">
+            <span class="btn btn--small">Direct Feed →</span>
+          </div>
+        </div>
+        <div class="app-promo-visual">
+          <div class="visual-test-pattern"></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
   <!-- Quick Links -->
   <section class="section">
     <div class="section-header">
       <h2>Explore</h2>
     </div>
     <div class="explore-grid stagger">
-      <a href="/music/transistor" class="explore-card">
-        <span class="explore-icon">📻</span>
-        <span class="explore-label">Transistor</span>
-        <span class="explore-desc">Online radio player</span>
-      </a>
-      <a href="/projects/live-tv" class="explore-card">
-        <span class="explore-icon">📺</span>
-        <span class="explore-label">Live TV</span>
-        <span class="explore-desc">Global television</span>
-      </a>
       <a href="/music" class="explore-card">
         <span class="explore-icon">♪</span>
         <span class="explore-label">Music</span>
@@ -282,6 +321,120 @@ import { musicArticles } from '../data/music';
     gap: 1rem;
   }
 
+  /* App Promo Cards */
+  .apps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .app-promo-card {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: all var(--transition-medium);
+    min-height: 200px;
+  }
+
+  .app-promo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-primary);
+  }
+
+  .app-promo-content {
+    padding: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .app-promo-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .app-promo-icon {
+    font-size: 2.5rem;
+  }
+
+  .app-promo-title {
+    font-size: 1.75rem;
+    margin: 0;
+    line-height: 1;
+  }
+
+  .app-promo-tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-warm-gray);
+  }
+
+  .app-promo-desc {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 480px;
+    margin-bottom: 1.5rem;
+  }
+
+  .app-promo-visual {
+    background: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-left: 1px solid var(--border-color);
+  }
+
+  .app-promo-card--transistor .app-promo-visual {
+    background: linear-gradient(135deg, var(--color-dark), var(--accent-primary));
+  }
+
+  .app-promo-card--cathode .app-promo-visual {
+    background: linear-gradient(135deg, #264653, #3D405B);
+  }
+
+  /* Visual Elements */
+  .visual-circle {
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .visual-waves span {
+    display: block;
+    width: 160px;
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+    margin: 10px 0;
+    transform: skewY(-15deg);
+  }
+
+  .visual-test-pattern {
+    width: 140px;
+    height: 140px;
+    background: repeating-conic-gradient(
+      from 0deg,
+      rgba(255,255,255,0.05) 0deg 90deg,
+      transparent 90deg 180deg
+    );
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+    animation: atomicSpin 20s linear infinite;
+  }
+
   .explore-card {
     display: flex;
     flex-direction: column;
@@ -327,5 +480,7 @@ import { musicArticles } from '../data/music';
     .hero-name { font-size: 2.75rem; }
     .articles-grid { grid-template-columns: 1fr; }
     .explore-grid { grid-template-columns: repeat(2, 1fr); }
+    .app-promo-card { grid-template-columns: 1fr; }
+    .app-promo-visual { display: none; }
   }
 </style>
