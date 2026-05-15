@@ -1,43 +1,68 @@
-# Astro Starter Kit: Minimal
+# Sha Razeek — Mid-Century Jet Age Website
 
-```sh
-npm create astro@latest -- --template minimal
-```
+A personal website and digital portfolio built with a "Mid-Century Jet Age" aesthetic. This project serves as a hub for professional work, editorial experiments, and creative side projects, reflecting a passion for hypermedia, UI/UX, and retro-futuristic design.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## ✦ Design Ethos: Mid-Century Modern
 
-## 🚀 Project Structure
+The site's visual language is inspired by the optimistic futurism of the 1950s and 60s—the "Jet Age." This is characterized by:
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Palette:** A curated selection of Cream, Teal, Coral, Mustard, and Charcoal.
+- **Typography:** Geometric sans-serifs (Figtree) paired with technical mono-spaced fonts (IBM Plex Mono).
+- **Motifs:** Atomic starbursts, jet-age decorative lines, and subtle "springy" animations.
+- **Layout:** A flexible sidebar-driven navigation that prioritizes content clarity and editorial flow.
+
+## 🚀 Tech Stack
+
+- **Framework:** [Astro 6.x](https://astro.build/) (Static Output)
+- **Runtime:** Node.js (>=22.12.0)
+- **Deployment:** [Cloudflare Pages](https://pages.cloudflare.com/) via `@astrojs/cloudflare`
+- **Styling:** Vanilla CSS with custom properties for tokens
+- **Type Safety:** TypeScript
+
+## 📁 Project Structure
 
 ```text
 /
-├── public/
+├── public/          # Static assets (images, icons)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/  # Shared Astro components (Sidebar, etc.)
+│   ├── data/        # TypeScript data files (Portfolio, Quizzes, Music)
+│   ├── layouts/     # Page layouts (Layout.astro)
+│   ├── pages/       # Route-based pages (Portfolio, Blog, Trivia, etc.)
+│   └── styles/      # Global CSS and mid-century tokens
+├── astro.config.mjs # Astro configuration
+└── wrangler.jsonc   # Cloudflare Pages configuration
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## ◈ Key Features
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
+- **Portfolio:** Showcasing projects like SLIFA Magazine, Transistor Radio, and the Mid-Century Design System.
+- **Articles:** A blog platform featuring experiments in AI augmentation, culture (City Pop, Enka), and technical explorations.
+- **Trivia:** Weekly interactive quizzes with a custom retro-styled quiz engine.
+- **Chronos Tracker:** A personal time-tracking utility integrated into the dashboard.
+- **Music:** A curated section for music-related projects and playlists.
 
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Command           | Action                                           |
+| :---------------- | :----------------------------------------------- |
+| `npm install`     | Installs dependencies                            |
+| `npm run dev`     | Starts local dev server at `localhost:4321`      |
+| `npm run build`   | Build your production site to `./dist/`          |
+| `npm run preview` | Preview your build locally, before deploying     |
+| `npm run astro`   | Run Astro CLI commands                           |
 
-## 👀 Want to learn more?
+## ✦ Deployment
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The site is automatically deployed to **Cloudflare Pages** on push. 
+
+To generate wrangler types for development:
+```bash
+npm run generate-types
+```
+
+---
+
+*Designed and Developed by [Sha Razeek](https://github.com/sha-razeek)*
