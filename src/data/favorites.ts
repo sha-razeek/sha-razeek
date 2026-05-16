@@ -49,6 +49,7 @@ export const favorites: FavoriteItem[] = [
     type: 'movie',
     year: '2014',
     description: 'A stylish Indonesian martial arts epic featuring breathtaking cinematography and classic wuxia-inspired storytelling.',
+    coverImage: '/images/the-golden-cane-warrior.jpg',
   },
 
   // TV Shows
