@@ -67,6 +67,7 @@ export const favorites: FavoriteItem[] = [
     type: 'tv',
     year: '2001',
     description: 'A beloved NHK Asadora set in Okinawa and Tokyo, following Eri Kohagura’s journey from a carefree island girl to a determined nurse.',
+    coverImage: '/images/churasan.jpg',
   },
   {
     title: 'According to Jim',
@@ -106,6 +107,7 @@ export const favorites: FavoriteItem[] = [
     type: 'tv',
     year: '1977 - 1979',
     description: 'A classic British sitcom centered on an English teacher instructing a diverse group of foreign students in London.',
+    coverImage: '/images/mind-your-language.jpg',
   },
   {
     title: 'Kaseifu No Mita',
@@ -113,6 +115,7 @@ export const favorites: FavoriteItem[] = [
     type: 'tv',
     year: '2011',
     description: 'A mysterious, emotionless housekeeper enters a family in crisis and resolves their problems through unconventional and often chilling means.',
+    coverImage: '/images/kaseifu-no-mita.jpg',
   },
   {
     title: 'Marina',
@@ -120,6 +123,7 @@ export const favorites: FavoriteItem[] = [
     type: 'tv',
     year: '2024',
     description: 'A modern Malaysian melodrama following a woman who becomes entangled in a web of wealth and conspiracy while seeking a better life in the city.',
+    coverImage: '/images/marina.jpg',
   },
   {
     title: 'Aduh Bibikku',
@@ -134,6 +138,7 @@ export const favorites: FavoriteItem[] = [
     type: 'tv',
     year: '2016',
     description: 'A charming Philippine romantic drama about a hardworking Filipina determined to reclaim her family’s land and the foreigner who falls for her.',
+    coverImage: '/images/be-my-lady.jpg',
   },
 
   // Music
