@@ -33,6 +33,7 @@ export const favorites: FavoriteItem[] = [
     type: 'movie',
     year: '2005',
     description: 'A visually stunning adaptation of "Basilisk", depicting the tragic love story between two rival ninjas during the Tokugawa shogunate.',
+    coverImage: '/images/shinobi.jpg',
   },
   {
     title: 'Wonderful Nightmare',
