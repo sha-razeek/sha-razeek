@@ -26,18 +26,25 @@ export const favorites: FavoriteItem[] = [
   
   // Movies
   {
-    title: '2001: A Space Odyssey',
-    creator: 'Stanley Kubrick',
+    title: 'Shinobi: Heart Under Blade',
+    creator: 'Ten Shimoyama',
     type: 'movie',
-    year: '1968',
-    description: 'The ultimate cinematic exploration of human evolution and artificial intelligence, perfectly capturing Jet Age futurism.',
+    year: '2005',
+    description: 'A visually stunning adaptation of "Basilisk", depicting the tragic love story between two rival ninjas during the Tokugawa shogunate.',
   },
   {
-    title: 'North by Northwest',
-    creator: 'Alfred Hitchcock',
+    title: 'Wonderful Nightmare',
+    creator: 'Kang Hyo-jin',
     type: 'movie',
-    year: '1959',
-    description: 'A stylish thriller that epitomizes mid-century modern aesthetic, from Saul Bass titles to sharp suits.',
+    year: '2015',
+    description: 'A successful lawyer dies in a clerical error and must live as a housewife and mother for a month before returning to her own life.',
+  },
+  {
+    title: 'The Golden Cane Warrior',
+    creator: 'Ifa Isfansyah',
+    type: 'movie',
+    year: '2014',
+    description: 'A stylish Indonesian martial arts epic featuring breathtaking cinematography and classic wuxia-inspired storytelling.',
   },
 
   // TV Shows
