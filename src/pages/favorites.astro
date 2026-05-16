@@ -49,6 +49,12 @@ const getItemsByType = (type: string) => favorites.filter(item => item.type === 
                     {item.year && <span class="favorite-year">{item.year}</span>}
                   </div>
                   
+                  {item.country && (
+                    <div class="favorite-meta">
+                      <span class="country-tag">📍 {item.country}</span>
+                    </div>
+                  )}
+                  
                   <p class="favorite-creator">{item.creator}</p>
                   
                   {item.description && <p class="favorite-desc">{item.description}</p>}
@@ -169,6 +175,27 @@ const getItemsByType = (type: string) => favorites.filter(item => item.type === 
     font-size: 0.8rem;
     color: var(--color-warm-gray);
     white-space: nowrap;
+  }
+
+  .favorite-meta {
+    margin-bottom: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .country-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-primary);
+    background: rgba(42, 157, 143, 0.06);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-sm);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
   }
 
   .favorite-creator {
