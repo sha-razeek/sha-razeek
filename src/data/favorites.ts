@@ -51,6 +51,13 @@ export const favorites: FavoriteItem[] = [
     description: 'A stylish Indonesian martial arts epic featuring breathtaking cinematography and classic wuxia-inspired storytelling.',
     coverImage: '/images/the-golden-cane-warrior.jpg',
   },
+  {
+    title: 'In the Mood for Love',
+    creator: 'Wong Kar-wai',
+    type: 'movie',
+    year: '2000',
+    description: 'A visually ravishing and emotionally charged masterpiece of 1960s Hong Kong, exploring the subtle and restrained connection between two neighbors.',
+  },
 
   // TV Shows
   {
