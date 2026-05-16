@@ -48,7 +48,7 @@ export const myGear: GearItem[] = [
     brand: 'Baseus',
     category: 'Audio',
     specs: 'Noise Cancelling, 70h Battery Life',
-    description: 'Comfortable wireless headset for long focus sessions and clear audio.',
+    description: 'Comfortable wireless headset for long focus sessions and clear audio. The earpads though are a bit fragile. Had to get replacements for mine.',
   },
   {
     name: 'SXS1000 1TB',
