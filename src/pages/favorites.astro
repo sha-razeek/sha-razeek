@@ -43,22 +43,22 @@ const getItemsByType = (type: string) => favorites.filter(item => item.type === 
                   />
                 </div>
                 
-                <div class="favorite-card-body">
-                  <div class="favorite-header">
-                    <h3>{item.title}</h3>
-                    {item.year && <span class="favorite-year">{item.year}</span>}
-                  </div>
-                  
-                  {item.country && (
-                    <div class="favorite-meta">
-                      <span class="country-tag">📍 {item.country}</span>
+                  <div class="favorite-card-body">
+                    <div class="favorite-header">
+                      <h3>{item.title}</h3>
+                      {item.year && <span class="favorite-year">{item.year}</span>}
                     </div>
-                  )}
-                  
-                  <p class="favorite-creator">{item.creator}</p>
-                  
-                  {item.description && <p class="favorite-desc">{item.description}</p>}
-                </div>
+                    
+                    <p class="favorite-creator">{item.creator}</p>
+                    
+                    {item.description && <p class="favorite-desc">{item.description}</p>}
+
+                    {item.country && (
+                      <div class="favorite-meta">
+                        <span class="country-tag">📍 {item.country}</span>
+                      </div>
+                    )}
+                  </div>
               </div>
             ))}
           </div>
@@ -178,7 +178,8 @@ const getItemsByType = (type: string) => favorites.filter(item => item.type === 
   }
 
   .favorite-meta {
-    margin-bottom: 0.5rem;
+    margin-top: auto;
+    padding-top: 1rem;
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
