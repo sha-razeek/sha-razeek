@@ -121,17 +121,24 @@ export const favorites: FavoriteItem[] = [
 
   // Music
   {
-    title: 'Kind of Blue',
-    creator: 'Miles Davis',
+    title: 'Irresistible',
+    creator: 'Jessica Simpson',
     type: 'music',
-    year: '1959',
-    description: 'The definitive modal jazz album, essential listening for any mid-century enthusiast.',
+    year: '2001',
+    description: 'A landmark early 2000s pop album featuring the hit title track, showcasing vocal versatility and polished production.',
   },
   {
-    title: 'Pet Sounds',
-    creator: 'The Beach Boys',
+    title: 'The Complete Singles',
+    creator: 'Hiromi Iwasaki',
     type: 'music',
-    year: '1966',
-    description: 'A revolutionary pop album that pushed the boundaries of studio production and composition.',
+    year: '2007',
+    description: 'A comprehensive collection from one of Japan’s most technically gifted vocalists, spanning her legendary career from the 70s onwards.',
+  },
+  {
+    title: 'Gently',
+    creator: 'Midori Karashima',
+    type: 'music',
+    year: '1992',
+    description: 'A beautifully composed J-pop album known for its soft, melodic arrangements and Karashima’s emotive songwriting.',
   },
 ];
