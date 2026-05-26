@@ -2,8 +2,6 @@
 
 I'm a **Hypermedia Specialist, Full-Stack Developer, and UI/UX Designer** with nearly two decades of experience bridging the gap between elegant design and functional technology.
 
-Currently, I'm an **Architect at Acuity Analytics**, where I lead UI/UX practices and manage delivery for Asset Management and Private Markets.
-
 ---
 
 ### ◈ What I Do
@@ -15,19 +13,8 @@ Currently, I'm an **Architect at Acuity Analytics**, where I lead UI/UX practice
 
 ---
 
-### ▣ Professional Background
-
-- **Architect** @ Acuity Analytics (2023 - Present)
-- **Senior Software Engineer** @ Acuity Knowledge Partners (2012 - 2023)
-- **Software Engineer** @ Amba Research (2007 - 2013)
-- **B.Sc. (Hons) in Statistics with Computer Science** (University of Colombo, 2007)
-
----
-
 ### ✦ Featured Projects
 
-- **[Sakinah](https://sharazeek.com/sakinah):** A minimalist space for reflection and calm.
-- **[Transistor Radio](https://sharazeek.com/music/transistor):** A web-based radio experience celebrating global frequencies.
 - **[Portfolio](https://sharazeek.com/portfolio):** A curated selection of my design and development work.
 
 ---
@@ -35,9 +22,6 @@ Currently, I'm an **Architect at Acuity Analytics**, where I lead UI/UX practice
 ### ♫ Connect with Me
 
 - 🌐 [sharazeek.com](https://sharazeek.com)
-- ✉️ [sharazeek@atomicmail.io](mailto:sharazeek@atomicmail.io)
-- 💼 [LinkedIn](https://linkedin.com/in/sharazeek)
-
 ---
 
 > "Interfaces should be every bit as elegant as they are functional."
