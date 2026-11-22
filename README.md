@@ -4,7 +4,7 @@ I'm a **Hypermedia Specialist, Full-Stack Developer, and UI/UX Designer** with n
 
 ---
 
-### ◈ What I Do
+### Some of What I Do
 
 - **Full-Stack Development:** Building robust, cloud-native applications with a focus on interconnected hypermedia systems.
 - **UI/UX Design:** Crafting digital interfaces that channel the optimism and refinement of **Mid-Century Modern** aesthetics.
@@ -13,13 +13,13 @@ I'm a **Hypermedia Specialist, Full-Stack Developer, and UI/UX Designer** with n
 
 ---
 
-### ✦ Featured Projects
+### Featured Projects
 
 - **[Portfolio](https://sharazeek.com/portfolio):** A curated selection of my design and development work.
 
 ---
 
-### ♫ Connect with Me
+### Connect with Me
 
 - 🌐 [sharazeek.com](https://sharazeek.com)
 ---
